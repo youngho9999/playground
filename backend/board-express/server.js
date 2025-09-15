@@ -64,6 +64,30 @@ app.get("/api/event", (req, res) => {
   ]);
 });
 
+// 좋아요 수 증가
+app.post("/api/posts/:id/like", async (req, res) => {
+  try {
+    const { id } = req.params;
+    const data = await fs.readFile("./posts.json", "utf8");
+    const posts = JSON.parse(data);
+    const post = posts.find((p) => p.id === parseInt(id));
+
+    if (!post) {
+      return res.status(404).json({ message: "Post not found" });
+    }
+
+    post.likeCount = (post.likeCount || 0) + 1;
+    post.updatedAt = new Date().toISOString();
+
+    await fs.writeFile("./posts.json", JSON.stringify(posts, null, 2));
+
+    res.json({ likeCount: post.likeCount });
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ message: "Error updating like count" });
+  }
+});
+
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });

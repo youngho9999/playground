@@ -5,7 +5,8 @@
     "content": "게시판 테스트를 위한 첫 번째 글입니다.",
     "author": "관리자",
     "createdAt": "2025-09-10T10:30:00.000Z",
-    "updatedAt": "2025-09-10T10:30:00.000Z"
+    "updatedAt": "2025-09-15T06:34:55.600Z",
+    "likeCount": 19
   },
   {
     "id": 2,
@@ -13,7 +14,8 @@
     "content": "리액트로 게시판을 만들어보는 중입니다. 백엔드는 Express로 구현했어요.",
     "author": "개발자",
     "createdAt": "2025-09-10T11:15:00.000Z",
-    "updatedAt": "2025-09-10T11:15:00.000Z"
+    "updatedAt": "2025-09-15T06:34:34.202Z",
+    "likeCount": 12
   },
   {
     "id": 3,
@@ -21,6 +23,7 @@
     "content": "Express를 사용해서 간단한 RESTful API를 만들어보고 있습니다.",
     "author": "학습자",
     "createdAt": "2025-09-10T12:00:00.000Z",
-    "updatedAt": "2025-09-10T12:00:00.000Z"
+    "updatedAt": "2025-09-15T06:34:51.609Z",
+    "likeCount": 47
   }
 ]
