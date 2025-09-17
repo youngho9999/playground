@@ -21,7 +21,7 @@ async function getPosts(): Promise<Post[]> {
     }
     const posts = await res.json();
     // Initialize likes to 0 if not provided by the API
-    return posts.map((post: any) => ({ ...post, likeCount: post.likeCount || 0 }));
+    return posts.map((post: Post) => ({ ...post, likeCount: post.likeCount || 0 }));
   } catch (error) {
     console.error(error);
     return [];

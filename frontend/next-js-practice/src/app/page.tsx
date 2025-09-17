@@ -20,7 +20,7 @@ export default async function Home() {
           <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
               {
               onGoingEvents.map((event: Event) => (
-                  <li className="mb-2 tracking-[-.01em]">
+                  <li key={event.name} className="mb-2 tracking-[-.01em]">
                     <strong>{event.name}</strong>
                     <p>기간 : {event.date}</p>
                   </li>
