@@ -15,7 +15,7 @@ interface Post {
 
 async function getPosts(): Promise<Post[]> {
 
-  const baseUrl = '158.180.93.78';
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
 
   try {
     const res = await fetch(`http://${baseUrl}:5001/api/posts`, { cache: 'no-store' });

@@ -28,11 +28,13 @@ async function getPosts(): Promise<Post[]> {
 
 export default async function BoardServerPage() {
   const posts = await getPosts();
+  const key = process.env.SERVER_KEY;
 
   return (
     <div className="container mx-auto p-4">
       <h1 className="text-2xl font-bold mb-4">게시판 (서버 컴포넌트)</h1>
       <p className="mb-4 text-gray-600">이 페이지는 서버 컴포넌트입니다. &apos;좋아요&apos; 버튼만 클라이언트 컴포넌트입니다.</p>
+      <p className="mb-4 text-gray-600">이건 서버 키 입니다. {key}</p>
       {posts.length === 0 ? (
         <p>게시글이 없거나 데이터를 불러오는 데 실패했습니다.</p>
       ) : (
