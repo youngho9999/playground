@@ -14,8 +14,11 @@ interface Post {
 }
 
 async function getPosts(): Promise<Post[]> {
+
+  const baseUrl = '158.180.93.78';
+
   try {
-    const res = await fetch('http://localhost:5001/api/posts', { cache: 'no-store' });
+    const res = await fetch(`http://${baseUrl}:5001/api/posts`, { cache: 'no-store' });
     if (!res.ok) {
       throw new Error('Failed to fetch posts');
     }
