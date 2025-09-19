@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { getOngoingEvents, Event } from "./events";
 
 export default async function Home() {
@@ -42,6 +43,24 @@ export default async function Home() {
             Save and see your changes instantly.
           </li>
         </ol>
+
+        <div className="flex gap-4">
+          <Link href="/board">
+            <button className="border border-gray-300 rounded-md px-4 py-2">
+              Go to Board
+            </button>
+          </Link>
+          <Link href="/board-server">
+            <button className="border border-gray-300 rounded-md px-4 py-2">
+              Go to Board Server
+            </button>
+          </Link>
+          <Link href="/sse">
+            <button className="border border-gray-300 rounded-md px-4 py-2">
+              Go to Board Server
+            </button>
+          </Link>
+        </div>
 
         
       </main>
