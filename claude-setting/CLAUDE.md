@@ -1,0 +1,1 @@
+Use absolute path when running grep command. 

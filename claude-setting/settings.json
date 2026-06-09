@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(grep:*)",
+      "Bash(ls *)",
+      "Bash(echo *)"
+    ]
+  },
+  "effortLevel": "high",
+  "theme": "light",
+  "autoCompactEnabled": false
+}
